@@ -20,3 +20,7 @@
     update_cache: yes
   when: squash_apt_sources.changed or squash_apt_key.changed
 
+- name: Ensure package is installed.
+  apt:
+    pkg: 'squash-tm'
+    state: present
