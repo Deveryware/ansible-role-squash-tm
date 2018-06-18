@@ -24,3 +24,8 @@
   apt:
     pkg: 'squash-tm'
     state: present
+
+- name: Ensure service is up and running.
+  service:
+    name: 'squash-tm'
+    state: started
