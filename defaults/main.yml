@@ -1,2 +1,6 @@
 ---
 squash_database: 'none'
+
+squash_apt_url: 'http://repo.squashtest.org'
+squash_apt_key: 'D56D74C7'
+squash_apt_key_url: "{{ squash_apt_url }}/repo.squashtest.org.gpg.key"

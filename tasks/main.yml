@@ -1,0 +1,22 @@
+---
+- name: Ensure apt sources are updated.
+  copy:
+    content: "deb {{ squash_apt_url }}/{{ ansible_distribution | lower }} {{ ansible_distribution_release | lower }} main"
+    dest: '/etc/apt/sources.list.d/squash-tm.list'
+    owner: root
+    group: root
+    mode: 0644
+  register: squash_apt_sources
+
+- name: Ensure apt key is imported.
+  apt_key:
+    url: "{{ squash_apt_key_url }}"
+    id: "{{ squash_apt_key }}"
+    state: "present"
+  register: squash_apt_key
+
+- name: Ensure apt cache is up-to-date.
+  apt:
+    update_cache: yes
+  when: squash_apt_sources.changed or squash_apt_key.changed
+
