@@ -12,6 +12,8 @@ This Ansible role installs and configures Squash TM (Official website: https://w
     http://<host>:<port>/<context>
     http://localhost:8080/squash
 
+Initial credentials are admin / admin . Do not forget to change it!
+
 ## License
 
 MIT
