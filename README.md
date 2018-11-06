@@ -14,6 +14,13 @@ This Ansible role installs and configures Squash TM (Official website: https://w
 
 Initial credentials are admin / admin . Do not forget to change it!
 
+## Example Playbook
+
+    - hosts: servers
+      roles:
+      - role: ansible-role-squash-tm
+        squash_db_password: 'oloc4ever'
+
 ## Main Variables
 
 The default database is h2.
