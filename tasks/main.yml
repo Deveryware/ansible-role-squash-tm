@@ -29,6 +29,13 @@
   template:
     src: "squash-tm.j2"
     dest: "/etc/default/squash-tm"
+  register: squash_configuration_file
+
+- name: Ensure service is restarted if needed.
+  service:
+    name: 'squash-tm'
+    state: restarted
+  when: squash_configuration_file.changed
 
 - name: Ensure service is up and running.
   service:

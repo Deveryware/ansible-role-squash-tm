@@ -23,6 +23,19 @@ The default database is h2.
     squash_db_username: "sa"
     squash_db_password: "sa"
 
+### Mysql
+
+    squash_db_url: "jdbc:mysql://localhost:3306/squashtm"
+    squash_db_type: "mysql"
+    squash_db_username: "squash-tm"
+    squash_db_password: "initial_pw"
+
+### Postgresql
+
+    squash_db_url: "jdbc:postgresql://localhost:5432/squashtm"
+    squash_db_type: "postgresql"
+    squash_db_username: "squash-tm"
+    squash_db_password: "initial_pw"
 
 ## License
 
