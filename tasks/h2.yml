@@ -1,0 +1,3 @@
+---
+- debug:
+    msg: "Squash TM comes by default with an embedded H2 database, and was configured to use it, but this is for test purposes only."

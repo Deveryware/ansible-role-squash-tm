@@ -1,10 +1,10 @@
 # Ansible Role Squash TM
 
-This Ansible role installs and configures Squash TM (Official website: https://www.squashtest.org/).
+This Ansible role installs and configures Squash TM 1.19.0+ (Official website: https://www.squashtest.org/).
 
 ## Prerequisites
 
-* Java 8 (t is IMPERATIVE to use Java 8, Java 7 is not supported anymore)
+* Java 8 (it is IMPERATIVE to use Java 8, Java 7 is not supported anymore)
 * Database: none or MySQL 5.0 + (but not MySQL 5.6), PostGres 9.1+.
 
 ## Usage

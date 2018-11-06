@@ -1,0 +1,6 @@
+---
+- name: Postgresql - Ensure database is populated.
+  postgresql_db:
+    name: "{{ squash_db_name }}"
+    target: "{{ squash_dbconfig_dir }}/pgsql"
+    state: restore
