@@ -4,3 +4,4 @@
     name: "{{ squash_db_name }}"
     state: import
     target: "{{ squash_dbconfig_dir }}/mysql"
+  notify: restart squash-tm

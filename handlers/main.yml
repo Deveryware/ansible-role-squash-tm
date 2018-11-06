@@ -1,0 +1,6 @@
+---
+- name: restart squash-tm
+  service:
+    name: 'squash-tm'
+    state: restarted
+
