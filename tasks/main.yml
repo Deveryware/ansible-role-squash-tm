@@ -25,6 +25,11 @@
     pkg: 'squash-tm'
     state: present
 
+- name: Ensure configration file is present.
+  template:
+    src: "squash-tm.j2"
+    dest: "/etc/default/squash-tm"
+
 - name: Ensure service is up and running.
   service:
     name: 'squash-tm'

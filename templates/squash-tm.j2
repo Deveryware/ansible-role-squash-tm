@@ -1,0 +1,16 @@
+# {{ ansible_managed }}
+# Default settings for Squash. This file is sourced by /bin/bash.
+
+
+# Extra arguments passed to JVM
+JAVA_ARGS="-Xms128m -Xmx512m -XX:MaxPermSize=128m -Djava.awt.headless=true"
+
+
+# Port for HTTP connector
+HTTP_PORT=8080
+
+# DataBase parameters
+DB_URL="jdbc:h2:///var/lib/squash-tm/data/squash-tm"
+DB_TYPE="h2"
+DB_USERNAME="sa"
+DB_PASSWORD="sa"
