@@ -10,7 +10,7 @@ JAVA_ARGS="-Xms128m -Xmx512m -XX:MaxPermSize=128m -Djava.awt.headless=true"
 HTTP_PORT=8080
 
 # DataBase parameters
-DB_URL="jdbc:h2:///var/lib/squash-tm/data/squash-tm"
-DB_TYPE="h2"
-DB_USERNAME="sa"
-DB_PASSWORD="sa"
+DB_URL="{{ squash_db_url }}"
+DB_TYPE="{{ squash_db_type }}"
+DB_USERNAME="{{ squash_db_username }}"
+DB_PASSWORD="{{ squash_db_password }}"

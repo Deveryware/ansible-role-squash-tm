@@ -14,6 +14,16 @@ This Ansible role installs and configures Squash TM (Official website: https://w
 
 Initial credentials are admin / admin . Do not forget to change it!
 
+## Main Variables
+
+The default database is h2.
+
+    squash_db_url: "jdbc:h2:///var/lib/squash-tm/data/squash-tm"
+    squash_db_type: "h2"
+    squash_db_username: "sa"
+    squash_db_password: "sa"
+
+
 ## License
 
 MIT
