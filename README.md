@@ -1,6 +1,6 @@
 # Ansible Role Squash TM
 
-This Ansible role installs and configures Squash TM 1.19.0+ (Official website: https://www.squashtest.org/).
+This Ansible role installs and configures Squash TM (Official website: https://www.squashtest.org/).
 
 ## Prerequisites
 

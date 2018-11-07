@@ -1,4 +1,13 @@
 ---
+- name: Postgresql - Ensure populate sql script is present.
+  stat:
+    path: "{{ squash_dbconfig_dir }}/pgsql"
+  register: squash_populate_pgsql
+
+- name: Postgresql - Before Squash-tm 1.19.0 the debian package is not postgresql ready.
+  include_tasks: postgresql_populate_fix.yml
+  when: not squash_populate_pgsql.stat.exists
+
 - name: Postgresql - Ensure database is populated.
   postgresql_db:
     name: "{{ squash_db_name }}"

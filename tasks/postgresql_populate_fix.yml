@@ -1,0 +1,22 @@
+---
+- name: Postgresql Fix - Ensure tarball is downloaded.
+  get_url:
+    url: "{{ squash_apt_url }}/distribution/squash-tm-{{ squash_version }}.RELEASE.tar.gz"
+    dest: "{{ squash_tmp_dir }}"
+
+- name: Postgresql Fix - Ensure tarball is uncompressed.
+  unarchive:
+    src: "{{ squash_tmp_dir }}/squash-tm-{{ squash_version }}.RELEASE.tar.gz"
+    dest: "{{ squash_tmp_dir }}/"
+    remote_src: yes
+
+- name: Postgresql Fix - Ensure squash dbconfig directory is present.
+  file:
+    path: '/usr/share/dbconfig-common/data/squash-tm/install'
+    state: directory
+
+- name: Postgresql Fix - Ensure full install sql script is present.
+  copy:
+    src: "{{ squash_tmp_dir }}/squash-tm/database-scripts/postgresql-full-install-version-{{ squash_version }}.RELEASE.sql"
+    dest: "{{ squash_dbconfig_dir }}/pgsql"
+    remote_src: yes
