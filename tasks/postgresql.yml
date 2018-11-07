@@ -12,5 +12,7 @@
   postgresql_db:
     name: "{{ squash_db_name }}"
     target: "{{ squash_dbconfig_dir }}/pgsql"
+    login_user: "{{ squash_db_username }}"
+    login_password: "{{ squash_db_password }}"
     state: restore
   notify: restart squash-tm
