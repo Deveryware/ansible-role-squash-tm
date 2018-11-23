@@ -20,11 +20,13 @@
     update_cache: yes
   when: squash_apt_sources.changed or squash_apt_key.changed
 
-- name: Ensure configration file is present.
+- name: Ensure configuration file is present.
   template:
     src: "squash-tm.j2"
     dest: "/etc/default/squash-tm"
   notify: restart squash-tm
+
+- include_tasks: debconf.yml
 
 - name: Ensure packages are installed.
   apt:
