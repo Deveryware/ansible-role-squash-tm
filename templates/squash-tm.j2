@@ -6,7 +6,7 @@
 JAVA_ARGS="-Xmx{{ squash_xmx}}{% if squash_xms is defined %} -Xms{{ squash_xms }}{% endif %}{% if squash_maxpermsize is defined %} -XX:MaxPermSize={{ squash_maxpermsize }}{% endif %} -Djava.awt.headless=true"
 
 # Port for HTTP connector
-HTTP_PORT=8080
+HTTP_PORT="{{ squash_http_port }}"
 
 # DataBase parameters
 DB_URL="{{ squash_db_url }}"

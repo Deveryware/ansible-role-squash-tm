@@ -52,6 +52,10 @@ The default database is h2.
     squash_xmx: '512m'
     squash_maxpermsize: '128m'
 
+### Others
+
+    squash_http_port: '8080'
+
 ## License
 
 MIT

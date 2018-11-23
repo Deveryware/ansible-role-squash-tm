@@ -21,3 +21,5 @@ squash_packages:
 squash_xms: '128m'
 squash_xmx: '512m'
 squash_maxpermsize: '128m'
+
+squash_http_port: '8080'
