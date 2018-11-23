@@ -44,6 +44,14 @@ The default database is h2.
     squash_db_username: "squash-tm"
     squash_db_password: "initial_pw"
 
+## Advanced Options
+
+### Java Args
+
+    squash_xms: '128m'
+    squash_xmx: '512m'
+    squash_maxpermsize: '128m'
+
 ## License
 
 MIT

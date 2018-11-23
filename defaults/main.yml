@@ -17,3 +17,7 @@ squash_packages:
 - bc
 - dbconfig-common
 - squash-tm
+
+squash_xms: '128m'
+squash_xmx: '512m'
+squash_maxpermsize: '128m'
