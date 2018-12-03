@@ -15,4 +15,5 @@
     login_user: "{{ squash_db_username }}"
     login_password: "{{ squash_db_password }}"
     state: restore
+  no_log: "{{ squash_no_log }}"
   notify: restart squash-tm

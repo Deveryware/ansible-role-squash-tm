@@ -21,3 +21,4 @@ squash_packages:
 squash_xmx: '512m'
 
 squash_http_port: '8080'
+squash_no_log: true
