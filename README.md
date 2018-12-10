@@ -51,6 +51,7 @@ The default database is h2.
     squash_xms: '128m'
     squash_xmx: '512m'
     squash_maxpermsize: '128m'
+    squash_extra_java_args: '-javaagent:path/to/glowroot.jar'
 
 ### Others
 

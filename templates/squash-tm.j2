@@ -3,7 +3,7 @@
 
 
 # Extra arguments passed to JVM
-JAVA_ARGS="-Xmx{{ squash_xmx}}{% if squash_xms is defined %} -Xms{{ squash_xms }}{% endif %}{% if squash_maxpermsize is defined %} -XX:MaxPermSize={{ squash_maxpermsize }}{% endif %} -Djava.awt.headless=true"
+JAVA_ARGS="-Xmx{{ squash_xmx}}{% if squash_xms is defined %} -Xms{{ squash_xms }}{% endif %}{% if squash_maxpermsize is defined %} -XX:MaxPermSize={{ squash_maxpermsize }}{% endif %} -Djava.awt.headless=true{% if squash_extra_java_args is defined %} {{ squash_extra_java_args }}{% endif %}"
 
 # Port for HTTP connector
 HTTP_PORT="{{ squash_http_port }}"
