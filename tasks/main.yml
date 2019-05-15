@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: 0644
-  register: squash_apt_sources
+  notify: update apt cache
 
 - name: Ensure apt key is imported.
   apt_key:
@@ -14,12 +14,7 @@
     id: "{{ squash_apt_key }}"
     state: "present"
     validate_certs: no
-  register: squash_apt_key
-
-- name: Ensure apt cache is up-to-date.
-  apt:
-    update_cache: yes
-  when: squash_apt_sources.changed or squash_apt_key.changed
+  notify: update apt cache
 
 - name: Ensure packages are installed.
   apt:

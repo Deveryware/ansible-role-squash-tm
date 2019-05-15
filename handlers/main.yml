@@ -3,3 +3,7 @@
   service:
     name: 'squash-tm'
     state: restarted
+
+- name: update apt cache
+  apt:
+    update_cache: yes
