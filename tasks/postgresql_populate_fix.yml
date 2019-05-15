@@ -1,12 +1,12 @@
 ---
 - name: Postgresql Fix - Ensure tarball is downloaded.
   get_url:
-    url: "{{ squash_apt_url }}/distribution/squash-tm-{{ squash_version }}.RELEASE.tar.gz"
+    url: "{{ squash_apt_url }}/distribution/squash-tm-{{ squash_version }}.RELEASE.tar.gz"
     dest: "{{ squash_tmp_dir }}"
 
 - name: Postgresql Fix - Ensure tarball is uncompressed.
   unarchive:
-    src: "{{ squash_tmp_dir }}/squash-tm-{{ squash_version }}.RELEASE.tar.gz"
+    src: "{{ squash_tmp_dir }}/squash-tm-{{ squash_version }}.RELEASE.tar.gz"
     dest: "{{ squash_tmp_dir }}/"
     remote_src: yes
 

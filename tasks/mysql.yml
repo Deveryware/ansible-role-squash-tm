@@ -1,7 +1,7 @@
 ---
 - name: Mysql - Ensure the database is populated.
   mysql_db:
-    name: "{{ squash_db_name }}"
+    name: "{{ squash_db_name }}"
     state: import
     target: "{{ squash_dbconfig_dir }}/mysql"
   notify: restart squash-tm

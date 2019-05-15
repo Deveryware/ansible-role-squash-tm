@@ -10,7 +10,7 @@
 
 - name: Ensure apt key is imported.
   apt_key:
-    url: "{{ squash_apt_key_url }}"
+    url: "{{ squash_apt_key_url }}"
     id: "{{ squash_apt_key }}"
     state: "present"
     validate_certs: no
