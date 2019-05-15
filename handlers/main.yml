@@ -3,4 +3,3 @@
   service:
     name: 'squash-tm'
     state: restarted
-
