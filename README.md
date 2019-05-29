@@ -43,6 +43,7 @@ The default database is h2.
     squash_db_type: "postgresql"
     squash_db_username: "squash-tm"
     squash_db_password: "initial_pw"
+    squash_db_host: "localhost"
 
 ## Advanced Options
 

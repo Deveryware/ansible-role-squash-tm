@@ -12,6 +12,7 @@ squash_db_type: "h2"
 squash_db_username: "sa"
 squash_db_password: "sa"
 squash_db_name: "squashtm"
+squash_db_host: 'localhost'
 
 squash_packages:
 - bc

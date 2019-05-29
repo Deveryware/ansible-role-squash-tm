@@ -14,6 +14,7 @@
     target: "{{ squash_dbconfig_dir }}/pgsql"
     login_user: "{{ squash_db_username }}"
     login_password: "{{ squash_db_password }}"
+    login_host: "{{ squash_db_host }}"
     state: restore
   no_log: "{{ squash_no_log }}"
   notify: restart squash-tm
