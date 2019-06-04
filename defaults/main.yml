@@ -19,6 +19,9 @@ squash_packages:
 - dbconfig-common
 - squash-tm
 
+squash_plugins2remove:
+- xsquash4jira
+
 squash_xmx: '512m'
 
 squash_http_port: '8080'

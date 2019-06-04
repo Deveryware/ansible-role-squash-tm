@@ -1,0 +1,14 @@
+---
+- name: Find plugins to remove.
+  find:
+    paths: '/usr/share/squash-tm/plugins'
+    patterns: "*{{ item }}*"
+  loop: "{{ squash_plugins2remove }}"
+  register: plugins2remove
+
+- name: Ensure undesired plugins are absent.
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  loop: "{{ plugins2remove.results | map(attribute='files') | flatten }}"
+  notify: restart squash-tm

@@ -28,6 +28,9 @@
     dest: "/etc/default/squash-tm"
   notify: restart squash-tm
 
+- name: Ensure plugins are uninstalled.
+  include_tasks: "plugins.yml"
+
 - name: Ensure database is ready.
   include_tasks: "{{ squash_db_type }}.yml"
 
