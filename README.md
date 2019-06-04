@@ -54,6 +54,13 @@ The default database is h2.
     squash_maxpermsize: '128m'
     squash_extra_java_args: '-javaagent:path/to/glowroot.jar'
 
+### Plugins
+
+By default Squash-tm is installed with a **xsquash4jira** plugin which try to synchronize every 5 minutes. Most of the time, it is unecessary, so this role uninstall it.
+
+    squash_plugins2remove:
+      - xsquash4jira
+
 ### Others
 
     squash_http_port: '8080'
