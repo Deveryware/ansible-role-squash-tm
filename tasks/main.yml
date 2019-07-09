@@ -16,6 +16,9 @@
     validate_certs: no
   notify: update apt cache
 
+- name: Force apt cache to be updated
+  meta: flush_handlers
+
 - name: Ensure packages are installed.
   apt:
     pkg: "{{ squash_packages }}"
