@@ -18,9 +18,8 @@
 
 - name: Ensure packages are installed.
   apt:
-    pkg: "{{ item }}"
+    pkg: "{{ squash_packages }}"
     state: present
-  with_items: "{{ squash_packages }}"
 
 - name: Ensure configuration file is present.
   template:
